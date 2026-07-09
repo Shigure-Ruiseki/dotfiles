@@ -1,0 +1,3 @@
+fastfetch
+ttf-jetbrains-mono-nerd
+kitty
