@@ -38,12 +38,6 @@
       "keyColor": "green",
     },
     {
-      "type": "disk",
-      "key": "  󰔚 OS Age",
-      "format": "{days} days",
-      "keyColor": "cyan",
-    },
-    {
       "type": "uptime",
       "key": "  󱫐 Uptime",
       "keyColor": "blue",
