@@ -11,6 +11,11 @@ readonly LOG_FILE="$SCRIPT_DIR/install.log"
 readonly BACKUP_DIR="$HOME/.dotfiles-backup-$(date +%Y%m%d_%H%M%S)"
 
 bootstrap() {
+    echo "🔒 Authenticating sudo for installation..."
+    sudo -v
+
+    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
     if ! command -v gum >/dev/null 2>&1; then
         echo "  ==> Installing gum..."
         sudo pacman -S --needed --noconfirm gum
@@ -168,9 +173,6 @@ install_packages() {
 
     gum confirm "Install all ${#packages[@]} packages with $aur_helper?" \
     || { err "Installation cancelled by user"; exit 1; }
-
-    echo "🔒 Authenticating sudo for installation..."
-    sudo -v
 
     echo "🔄 Installing packages via $aur_helper..."
     "$aur_helper" -S --needed --noconfirm "${packages[@]}"
