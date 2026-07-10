@@ -6,14 +6,14 @@
     "width": 36,
     "height": 24,
     "padding": {
-      "top": 2,
+      "top": 1,
       "left": 3,
     },
   },
   "modules": [
     {
       "type": "custom",
-      "format": "\u001b[36m   󰄛  シグレ ルイセキ",
+      "format": "\u001b[36m  󰄛  シグレ ルイセキ",
     },
     {
       "type": "custom",
@@ -123,20 +123,22 @@
     {
       "type": "memory",
       "key": "   RAM",
-      "format": "{1} / {2}",
       "keyColor": "cyan",
     },
     {
+      "type": "swap",
+      "key": "  󰓡 Swap",
+      "keyColor": "magenta",
+    },
+    {
       "type": "gpu",
-      "format": "{1} {2} @ {3}",
       "key": "  󰢮 GPU",
       "keyColor": "blue",
     },
     {
-      "type": "display",
-      "key": "  󰍹 Display",
-      "format": "{1} x {2} @ {3}Hz",
-      "keyColor": "cyan",
+      "type": "disk",
+      "key": "   Disk",
+      "keyColor": "red",
     },
     {
       "type": "custom",
