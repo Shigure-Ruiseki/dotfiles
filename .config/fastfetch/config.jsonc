@@ -20,10 +20,6 @@
       "format": "┌────────────────────────────────────────────────────────────────────────────────┐",
     },
     {
-      "type": "custom",
-      "format": "  󰇺 Specs",
-    },
-    {
       "type": "os",
       "key": "  󰣇 OS",
       "format": "{2}",
@@ -40,6 +36,12 @@
       "key": "   Kernel",
       "format": "{2}",
       "keyColor": "green",
+    },
+    {
+      "type": "disk",
+      "key": "  󰔚 OS Age",
+      "format": "{days} days",
+      "keyColor": "red",
     },
     {
       "type": "uptime",
